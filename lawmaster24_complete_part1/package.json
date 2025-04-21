@@ -1,0 +1,46 @@
+{
+  "name": "lawmaster24",
+  "version": "1.0.0",
+  "description": "KI-gestützte Rechtsassistenz-Plattform",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "export": "next build && next export"
+  },
+  "keywords": [
+    "legal",
+    "ai",
+    "law",
+    "assistance"
+  ],
+  "author": "Twentytwo Consulting",
+  "license": "ISC",
+  "dependencies": {
+    "@stripe/react-stripe-js": "^3.6.0",
+    "@stripe/stripe-js": "^7.1.0",
+    "bcryptjs": "^3.0.2",
+    "chart.js": "^4.4.9",
+    "csv-writer": "^1.6.0",
+    "dotenv": "^16.5.0",
+    "jsonwebtoken": "^9.0.2",
+    "jspdf": "^3.0.1",
+    "jspdf-autotable": "^5.0.2",
+    "micro": "^10.0.1",
+    "mysql2": "^3.14.0",
+    "next": "^15.3.0",
+    "openai": "^4.95.0",
+    "react": "^19.1.0",
+    "react-chartjs-2": "^5.3.0",
+    "react-dom": "^19.1.0",
+    "stripe": "^18.0.0",
+    "uuid": "^11.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^9.24.0",
+    "eslint-config-next": "^15.3.0"
+  }
+}

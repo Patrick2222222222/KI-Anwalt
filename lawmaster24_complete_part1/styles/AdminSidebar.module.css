@@ -1,0 +1,176 @@
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  background-color: white;
+  border-right: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.logo a {
+  text-decoration: none;
+  color: var(--text-color);
+  display: block;
+}
+
+.logo h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: var(--primary-color);
+}
+
+.logo span {
+  font-size: 0.8rem;
+  color: var(--text-light);
+}
+
+.navigation {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1rem 0;
+}
+
+.navigation ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navigation li {
+  margin-bottom: 0.25rem;
+}
+
+.navigation a {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+  color: var(--text-color);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.navigation a:hover {
+  background-color: rgba(58, 134, 255, 0.05);
+  color: var(--primary-color);
+}
+
+.navigation a.active {
+  background-color: rgba(58, 134, 255, 0.1);
+  color: var(--primary-color);
+  border-left: 3px solid var(--primary-color);
+}
+
+.navigation i {
+  width: 20px;
+  margin-right: 10px;
+  text-align: center;
+}
+
+.userSection {
+  padding: 1rem 1.5rem;
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+}
+
+.userAvatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: rgba(58, 134, 255, 0.1);
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  margin-right: 10px;
+}
+
+.userName {
+  display: flex;
+  flex-direction: column;
+}
+
+.userName span {
+  font-weight: 500;
+}
+
+.userName small {
+  font-size: 0.7rem;
+  color: var(--text-light);
+}
+
+.logoutButton {
+  background: none;
+  border: none;
+  color: var(--text-light);
+  cursor: pointer;
+  font-size: 1rem;
+  transition: var(--transition);
+}
+
+.logoutButton:hover {
+  color: var(--danger-color);
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 60px;
+    overflow: hidden;
+  }
+  
+  .logo {
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  .logo h2, .logo span {
+    display: none;
+  }
+  
+  .navigation a span {
+    display: none;
+  }
+  
+  .navigation a {
+    padding: 0.75rem;
+    justify-content: center;
+  }
+  
+  .navigation i {
+    margin-right: 0;
+  }
+  
+  .userSection {
+    padding: 1rem;
+    justify-content: center;
+  }
+  
+  .userName {
+    display: none;
+  }
+  
+  .userAvatar {
+    margin-right: 0;
+  }
+  
+  .logoutButton {
+    display: none;
+  }
+}

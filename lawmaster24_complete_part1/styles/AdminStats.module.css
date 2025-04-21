@@ -1,0 +1,235 @@
+.statsContainer {
+  margin-bottom: 2rem;
+}
+
+.statsHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.timeRangeSelector {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.timeRangeButton {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--border-color);
+  background: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.timeRangeButton:hover {
+  border-color: var(--primary-color);
+}
+
+.timeRangeButton.active {
+  background-color: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+}
+
+.statsSummary {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.statCard {
+  background-color: white;
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+}
+
+.statIcon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(58, 134, 255, 0.1);
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  flex-shrink: 0;
+}
+
+.statInfo {
+  flex: 1;
+}
+
+.statInfo h3 {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--text-light);
+}
+
+.statValue {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 0.25rem 0;
+}
+
+.statChange {
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+}
+
+.positive {
+  color: var(--success-color);
+}
+
+.negative {
+  color: var(--danger-color);
+}
+
+.changePeriod {
+  color: var(--text-light);
+  margin-left: 0.5rem;
+}
+
+.chartsContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.chartCard {
+  background-color: white;
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.chartCard h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.chartContainer {
+  height: 300px;
+  position: relative;
+}
+
+.chartCard:first-child {
+  grid-column: 1 / -1;
+}
+
+.exportSection {
+  background-color: white;
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.exportSection h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.exportButtons {
+  display: flex;
+  gap: 1rem;
+}
+
+.exportButton {
+  padding: 0.75rem 1.5rem;
+  background-color: white;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: var(--transition);
+}
+
+.exportButton:hover {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+.loadingContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+}
+
+.spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  border-top: 4px solid var(--primary-color);
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.errorContainer {
+  text-align: center;
+  padding: 2rem;
+}
+
+.errorMessage {
+  color: var(--danger-color);
+  margin-bottom: 1rem;
+}
+
+.retryButton {
+  padding: 0.5rem 1rem;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+  .statsSummary {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .chartsContainer {
+    grid-template-columns: 1fr;
+  }
+  
+  .chartCard:first-child {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .statsHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .statsSummary {
+    grid-template-columns: 1fr;
+  }
+  
+  .exportButtons {
+    flex-direction: column;
+  }
+}

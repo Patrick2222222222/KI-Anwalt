@@ -1,0 +1,293 @@
+.userControls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  background-color: white;
+  border-radius: var(--border-radius);
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.searchFilter {
+  display: flex;
+  gap: 1rem;
+}
+
+.searchBox {
+  position: relative;
+}
+
+.searchBox input {
+  padding: 0.5rem 1rem;
+  padding-right: 2.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  width: 250px;
+  transition: var(--transition);
+}
+
+.searchBox input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+.searchBox i {
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-light);
+}
+
+.filterBox select {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  background-color: white;
+  min-width: 150px;
+}
+
+.filterBox select:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+.userStats {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.statItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.statValue {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.statLabel {
+  font-size: 0.8rem;
+  color: var(--text-light);
+}
+
+.userTable {
+  background-color: white;
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+.userTable table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.userTable th {
+  background-color: #f8f9fa;
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  color: var(--text-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.userTable td {
+  padding: 1rem;
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-color);
+}
+
+.userTable tr:last-child td {
+  border-bottom: none;
+}
+
+.userTable tr:hover {
+  background-color: rgba(58, 134, 255, 0.05);
+}
+
+.roleTag, .statusTag {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.roleTag.user {
+  background-color: rgba(58, 134, 255, 0.1);
+  color: #3a86ff;
+}
+
+.roleTag.lawyer {
+  background-color: rgba(106, 76, 147, 0.1);
+  color: #6a4c93;
+}
+
+.roleTag.admin {
+  background-color: rgba(239, 71, 111, 0.1);
+  color: #ef476f;
+}
+
+.statusTag.active {
+  background-color: rgba(6, 214, 160, 0.1);
+  color: #06d6a0;
+}
+
+.statusTag.inactive {
+  background-color: rgba(239, 71, 111, 0.1);
+  color: #ef476f;
+}
+
+.actionButtons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.actionButtons button {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.editButton {
+  background-color: rgba(58, 134, 255, 0.1);
+  color: #3a86ff;
+}
+
+.editButton:hover {
+  background-color: #3a86ff;
+  color: white;
+}
+
+.viewButton {
+  background-color: rgba(6, 214, 160, 0.1);
+  color: #06d6a0;
+}
+
+.viewButton:hover {
+  background-color: #06d6a0;
+  color: white;
+}
+
+.deleteButton {
+  background-color: rgba(239, 71, 111, 0.1);
+  color: #ef476f;
+}
+
+.deleteButton:hover {
+  background-color: #ef476f;
+  color: white;
+}
+
+.addUserButton {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius);
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.addUserButton:hover {
+  background-color: #2a75e6;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.pageButton {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.pageButton:hover:not(:disabled) {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+.pageButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pageButton.activePage {
+  background-color: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+}
+
+.noResults {
+  text-align: center;
+  padding: 2rem;
+  color: var(--text-light);
+}
+
+@media (max-width: 1024px) {
+  .userControls {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+  
+  .userStats {
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .userTable {
+    overflow-x: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .searchFilter {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .searchBox, .filterBox {
+    width: 100%;
+  }
+  
+  .searchBox input, .filterBox select {
+    width: 100%;
+  }
+  
+  .userStats {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .statItem {
+    flex: 1;
+    min-width: calc(50% - 0.5rem);
+  }
+}

@@ -1,0 +1,445 @@
+.reportControls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  background-color: white;
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  align-items: flex-end;
+}
+
+.controlGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.controlGroup label {
+  font-size: 0.9rem;
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+.controlGroup select {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  min-width: 200px;
+}
+
+.buttonGroup {
+  display: flex;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+.buttonGroup button {
+  padding: 0.5rem 1rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  flex: 1;
+  transition: var(--transition);
+}
+
+.buttonGroup button:not(:last-child) {
+  border-right: 1px solid var(--border-color);
+}
+
+.buttonGroup button:hover {
+  background-color: rgba(58, 134, 255, 0.05);
+}
+
+.buttonGroup button.active {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.exportButton {
+  margin-left: auto;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius);
+  padding: 0.5rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: var(--transition);
+  height: 38px;
+}
+
+.exportButton:hover:not(:disabled) {
+  background-color: #2a75e6;
+}
+
+.exportButton:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.smallSpinner {
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top: 2px solid white;
+  width: 16px;
+  height: 16px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.reportPreview {
+  background-color: white;
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  margin-bottom: 1.5rem;
+}
+
+.previewHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.previewHeader h2 {
+  margin: 0;
+  font-size: 1.3rem;
+  color: var(--text-color);
+}
+
+.previewHeader span {
+  color: var(--text-light);
+  font-size: 0.9rem;
+}
+
+.summaryCards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.summaryCard {
+  background-color: #f8f9fa;
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.summaryIcon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(58, 134, 255, 0.1);
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+
+.summaryContent {
+  flex: 1;
+}
+
+.summaryValue {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--text-color);
+  margin-bottom: 0.25rem;
+}
+
+.summaryLabel {
+  font-size: 0.8rem;
+  color: var(--text-light);
+}
+
+.summaryChange {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.summaryChange.positive {
+  color: #06d6a0;
+}
+
+.summaryChange.negative {
+  color: #ef476f;
+}
+
+.summaryChange.neutral {
+  color: var(--text-light);
+}
+
+.chartContainer {
+  margin-bottom: 1.5rem;
+}
+
+.chartContainer h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  color: var(--text-color);
+}
+
+.chartPlaceholder {
+  background-color: #f8f9fa;
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.barChart {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 100%;
+  width: 100%;
+}
+
+.barContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.bar {
+  width: 30px;
+  background-color: var(--primary-color);
+  border-radius: 4px 4px 0 0;
+  margin-bottom: 0.5rem;
+}
+
+.barContainer span {
+  font-size: 0.8rem;
+  color: var(--text-light);
+}
+
+.lineChart {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.lineChartInner {
+  position: relative;
+  height: calc(100% - 30px);
+  width: 100%;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.dataPoint {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  transform: translate(-50%, 50%);
+}
+
+.dataPointValue {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.8rem;
+  color: var(--text-color);
+}
+
+.lineChartLabels {
+  position: relative;
+  height: 30px;
+  width: 100%;
+}
+
+.lineChartLabels span {
+  position: absolute;
+  font-size: 0.8rem;
+  color: var(--text-light);
+  transform: translateX(-50%);
+  top: 5px;
+}
+
+.tableContainer {
+  margin-bottom: 1.5rem;
+}
+
+.tableContainer h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  color: var(--text-color);
+}
+
+.dataTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.dataTable th {
+  background-color: #f8f9fa;
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-weight: 600;
+  color: var(--text-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.dataTable td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-color);
+}
+
+.dataTable tr:last-child td {
+  border-bottom: none;
+}
+
+.positive {
+  color: #06d6a0;
+}
+
+.negative {
+  color: #ef476f;
+}
+
+.placeholderMessage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  text-align: center;
+}
+
+.placeholderMessage i {
+  font-size: 3rem;
+  color: var(--text-light);
+  margin-bottom: 1rem;
+}
+
+.placeholderMessage p {
+  color: var(--text-color);
+  margin: 0;
+  margin-bottom: 0.5rem;
+}
+
+.smallText {
+  font-size: 0.8rem;
+  color: var(--text-light);
+}
+
+.savedReports {
+  background-color: white;
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.savedReports h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  color: var(--text-color);
+}
+
+.savedReportsTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.savedReportsTable th {
+  background-color: #f8f9fa;
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-weight: 600;
+  color: var(--text-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.savedReportsTable td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-color);
+}
+
+.savedReportsTable tr:last-child td {
+  border-bottom: none;
+}
+
+.reportActions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.downloadButton, .deleteButton {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.downloadButton {
+  background-color: rgba(58, 134, 255, 0.1);
+  color: #3a86ff;
+}
+
+.downloadButton:hover {
+  background-color: #3a86ff;
+  color: white;
+}
+
+.deleteButton {
+  background-color: rgba(239, 71, 111, 0.1);
+  color: #ef476f;
+}
+
+.deleteButton:hover {
+  background-color: #ef476f;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .reportControls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .exportButton {
+    margin-left: 0;
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .summaryCards {
+    grid-template-columns: 1fr;
+  }
+}

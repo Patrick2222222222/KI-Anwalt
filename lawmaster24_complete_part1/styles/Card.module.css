@@ -1,0 +1,25 @@
+.card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+.cardHeader {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #eaeaea;
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: #2c3e50;
+}
+
+.cardBody {
+  padding: 1.5rem;
+}
+
+.cardFooter {
+  padding: 1rem 1.5rem;
+  border-top: 1px solid #eaeaea;
+  background-color: #f9f9f9;
+}

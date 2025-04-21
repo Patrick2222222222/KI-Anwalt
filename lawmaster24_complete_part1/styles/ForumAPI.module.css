@@ -1,0 +1,319 @@
+.apiContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.apiHeader {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.apiHeader h1 {
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+}
+
+.apiHeader p {
+  color: var(--text-light);
+}
+
+.apiContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.apiDocs, .apiTester {
+  background-color: white;
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  padding: 2rem;
+}
+
+.apiDocs h2, .apiTester h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}
+
+.apiTester p {
+  color: var(--text-light);
+  margin-bottom: 1.5rem;
+}
+
+.apiSection {
+  margin-bottom: 2rem;
+}
+
+.apiSection h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  color: var(--text-color);
+}
+
+.apiSection p {
+  margin-bottom: 1rem;
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+.apiSection a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.apiSection a:hover {
+  text-decoration: underline;
+}
+
+.codeBlock {
+  background-color: #f8f9fa;
+  border-radius: var(--border-radius);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  overflow-x: auto;
+}
+
+.codeBlock code {
+  font-family: monospace;
+  color: #333;
+  line-height: 1.5;
+}
+
+.endpoint {
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.endpoint:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.endpointHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.method {
+  background-color: #06d6a0;
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.path {
+  font-family: monospace;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.endpoint h4 {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  color: var(--text-color);
+}
+
+.errorCodes {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.errorCodes li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.errorCodes li:last-child {
+  border-bottom: none;
+}
+
+.apiForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.formGroup label {
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.formGroup input,
+.formGroup select,
+.formGroup textarea {
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  font-family: inherit;
+  font-size: 1rem;
+  color: var(--text-color);
+  transition: var(--transition);
+}
+
+.formGroup textarea {
+  font-family: monospace;
+}
+
+.formGroup input:focus,
+.formGroup select:focus,
+.formGroup textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(58, 134, 255, 0.1);
+}
+
+.submitButton {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius);
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.submitButton:hover:not(:disabled) {
+  background-color: #2a75e6;
+}
+
+.submitButton:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.apiResponse {
+  margin-top: 2rem;
+}
+
+.apiResponse h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  color: var(--text-color);
+}
+
+.apiPricing {
+  margin-top: 3rem;
+}
+
+.apiPricing h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--text-color);
+}
+
+.pricingCards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.pricingCard {
+  background-color: white;
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.pricingHeader {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.pricingHeader h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}
+
+.price {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.25rem;
+}
+
+.amount {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+.period {
+  color: var(--text-light);
+}
+
+.pricingFeatures {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 2rem;
+  flex: 1;
+}
+
+.pricingFeatures li {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-color);
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.pricingFeatures li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #06d6a0;
+  font-weight: bold;
+}
+
+.pricingFeatures li:last-child {
+  border-bottom: none;
+}
+
+.pricingButton {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius);
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+  text-align: center;
+}
+
+.pricingButton:hover {
+  background-color: #2a75e6;
+}
+
+@media (max-width: 992px) {
+  .apiContent {
+    grid-template-columns: 1fr;
+  }
+  
+  .pricingCards {
+    grid-template-columns: 1fr;
+  }
+}

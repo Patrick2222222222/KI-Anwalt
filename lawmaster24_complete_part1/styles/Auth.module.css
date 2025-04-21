@@ -1,0 +1,102 @@
+.authContainer {
+  display: flex;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 2rem auto;
+}
+
+.authCard {
+  flex: 1;
+  background-color: var(--card-background);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  padding: 2rem;
+}
+
+.authInfo {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+  border-radius: var(--border-radius);
+  color: white;
+  padding: 2rem;
+}
+
+.authInfoContent {
+  width: 100%;
+}
+
+.authTitle {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.authSubtitle {
+  color: var(--text-light);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.authFooter {
+  margin-top: 2rem;
+  text-align: center;
+  color: var(--text-light);
+}
+
+.authFooter a {
+  color: var(--primary-color);
+  font-weight: 500;
+}
+
+.benefitsList {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0;
+}
+
+.benefitsList li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.benefitIcon {
+  color: #38b000;
+  margin-right: 1rem;
+  font-size: 1.2rem;
+}
+
+.testimonial {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  margin-top: 2rem;
+  position: relative;
+}
+
+.testimonial p {
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.testimonialAuthor {
+  display: flex;
+  align-items: center;
+}
+
+.testimonialName {
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .authContainer {
+    flex-direction: column;
+    padding: 0 1rem;
+  }
+  
+  .authCard, .authInfo {
+    width: 100%;
+  }
+}

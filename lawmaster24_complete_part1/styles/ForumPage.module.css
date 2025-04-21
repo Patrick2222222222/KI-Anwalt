@@ -1,0 +1,145 @@
+.forumContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.forumHeader {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.forumHeader h1 {
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+}
+
+.forumHeader p {
+  color: var(--text-light);
+  margin-bottom: 1.5rem;
+}
+
+.newPostButton {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius);
+  padding: 0.75rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+  margin: 0 auto;
+}
+
+.newPostButton:hover {
+  background-color: #2a75e6;
+}
+
+.forumControls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.categoryFilter {
+  flex: 1;
+  min-width: 300px;
+}
+
+.categoryTabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.categoryTabs button {
+  background: none;
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  color: var(--text-color);
+  cursor: pointer;
+  transition: var(--transition);
+  font-size: 0.9rem;
+}
+
+.categoryTabs button:hover {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+.categoryTabs button.active {
+  background-color: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+}
+
+.sortOptions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.sortOptions label {
+  color: var(--text-light);
+  font-size: 0.9rem;
+}
+
+.sortOptions select {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  color: var(--text-color);
+  background-color: white;
+}
+
+.forumPosts {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.noPosts {
+  background-color: white;
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  padding: 3rem;
+  text-align: center;
+}
+
+.noPosts i {
+  font-size: 3rem;
+  color: var(--text-light);
+  margin-bottom: 1rem;
+}
+
+.noPosts p {
+  color: var(--text-light);
+  margin-bottom: 1.5rem;
+}
+
+.noPosts .newPostButton {
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .forumControls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .sortOptions {
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .sortOptions select {
+    flex: 1;
+  }
+}
